@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div` 
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  
+ 
   
   
  
@@ -13,15 +14,15 @@ export const Header = styled.header`
     color: white;
     display: flex;
     position: fixed;
-    z-index: 1000;
+    
+    
     width: 100%;
-    gap: 1rem;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
     padding: 1rem;
     border-bottom: 2px solid #FAB217 ;
-    background: #363946;
+    background:#363946;
     
 
     img{
@@ -33,29 +34,24 @@ export const Header = styled.header`
       font-size: 1.7rem;
       
     }
-    button{
-      background: transparent;
-      color: #EDB230;
-      border: none;
-      cursor: pointer;
-      
-    }
+    
 
 `
 
 export const Content = styled.div` 
-  
-  
-  padding: 1rem; 
+  margin-top: 8rem;
+  padding:1rem; 
   text-align: center;
   
 `
 export const ContentCards = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 7rem;
+    
     gap: 1rem;
     color: white;
+    
+
   
 `
 

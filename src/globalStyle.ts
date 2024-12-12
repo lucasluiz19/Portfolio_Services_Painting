@@ -9,12 +9,16 @@ export const GlobalStyle = createGlobalStyle`
         
         
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body{
         
         background: #363946;
         font-size: 1.12rem;
         overflow-x: hidden;
         position: relative;
+        scroll-behavior: smooth;
         
     };
     

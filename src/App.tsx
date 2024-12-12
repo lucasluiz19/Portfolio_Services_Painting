@@ -3,7 +3,7 @@ import logo from './assets/logo.jpeg'
 import { Check, CheckCircle, Home, Images, Menu, PaintRoller, PhoneCall, Star } from "lucide-react";
 import { CaretLeft, CaretRight, InstagramLogo, WhatsappLogo, X } from "phosphor-react";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 
 
@@ -19,7 +19,7 @@ import foto9 from './assets/foto9.jpeg'
 import foto10 from './assets/foto10.jpeg'
 import foto11 from './assets/foto11.jpeg'
 import foto12 from './assets/foto12.jpeg'
-import { MenuContainer } from "./components/menu";
+
 
 
 
@@ -88,7 +88,7 @@ const data = [
 
 export function App() {
   
-  const [menuIsVisible, setMenuIsVisble]= useState(false)
+  
 
 
   const carrossel: any = useRef(null)
@@ -107,208 +107,162 @@ export function App() {
   }
 
 
-  const handleSetMenuIsVisible=(state:boolean)=>setMenuIsVisble(state)
+  
 
 
 
    
 
   return (
-    <Container>
+    <Container >
       
       <Header>
         <img src={logo} alt="" />
         <h1>Kauã Lima Pintor</h1>
-        <button onClick={()=>handleSetMenuIsVisible(true)} >
-          <Menu size={30} />
+        <div >
+          <PaintRoller size={30} color="#EDB230"/>
           
-        </button>
+        </div>
       </Header>
       
-      {menuIsVisible &&(
-         <MenuContainer
-          handleClosedMenu={()=>handleSetMenuIsVisible(false)}
-        />
-      )
-
-      }
-      {/* toggleHeader && (
-            <Modal >
-              <div>
-                <a>
-                  <Home size={25} color="white" />
-                  <span>Sobre Mim</span>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <PaintRoller size={25} color="white" />
-                  <span>Serviços</span>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <Star size={25} color="white" />
-                  <span>Diferenciais</span>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <Images size={25} color="white" />
-                  <span>Veja meus serviços</span>
-                </a>
-              </div>
-              
-              <div>
-                <a href="">
-                  <PhoneCall size={25} color="white" />
-                  <span>Entre em contato</span>
-                </a>
-              </div>
-              
-              
-            </Modal>
-
-          )*/
-      }
-
-
-
+     
+      
       <Content>
 
         <ContentCards >
           <p>Transformando espaços com cor e qualidade</p>
-          <Card  >
-            <HeaderContentCard >
+
+          <section id="sobre">
+            <Card  >
+              <HeaderContentCard  >
+                <span>
+                  <Home size={25} color="#005CB8" />
+                </span>
+                <p >
+                  Sobre Mim
+                </p>
+              </HeaderContentCard>
+
               <span>
-                <Home size={25} color="#005CB8" />
+                <p>
+                  Com mais de 6 anos de experiência em pinturas, ofereço serviços de
+                  alta qualidade para transformar sua casa ou seu estabelecimento.
+                </p>
+
+                <p>
+                  Trabalho com dedicação, precisão e cuidado para garantir o melhor
+                  em cada projeto
+                </p>
               </span>
-              <p >
-                Sobre Mim
-              </p>
-            </HeaderContentCard>
+            </Card>
+          </section >
+          
+          <section id="serviços">
+            <Card >
+              <HeaderContentCard>
+                <span>
+                  <PaintRoller size={25} color="#005CB8" />
+                </span>
+                <p>
+                  Serviços
+                </p>
+              </HeaderContentCard>
 
-            <span>
-              <p>
-                Com mais de 6 anos de experiência em pinturas, ofereço serviços de
-                alta qualidade para transformar sua casa ou seu estabelecimento.
-              </p>
+              <ul>
+                <li><CheckCircle size={25} color="#31B042" />Pintura Mecanizada</li>
+                <li><CheckCircle size={25} color="#31B042" />Lixamento Mecanizado</li>
+                <li><CheckCircle size={25} color="#31B042" />Emassamento Geral</li>
+                <li><CheckCircle size={25} color="#31B042" />Pinturas em Portões</li>
+                <li><CheckCircle size={25} color="#31B042" />Pinturas em Implementos</li>
+                <li><CheckCircle size={25} color="#31B042" />Efeito Mármore Polido</li>
+              </ul>
+            </Card>
+          </section>
+          
+          <section id="diferenciais">
+            <Card >
+              <HeaderContentCard>
+                <span>
+                  <Star size={25} color="red" />
+                </span>
+                <p>
+                  Diferenciais
+                </p>
+              </HeaderContentCard>
 
-              <p>
-                Trabalho com dedicação, precisão e cuidado para garantir o melhor
-                em cada projeto
-              </p>
-            </span>
-          </Card>
+              <ul>
+                <li><Check size={25} color="#31B042" />Qualidade Garantida.</li>
+                <li><Check size={25} color="#31B042" />Materiais de primeira Linha.</li>
+                <li><Check size={25} color="#31B042" />Pontualidade.</li>
+                <li><Check size={25} color="#31B042" />Prazos cumpridos com rigor.</li>
+                <li><Check size={25} color="#31B042" />Orçamento gratuito.</li>
+                <li><Check size={25} color="#31B042" />Avaliação sem compromisso.</li>
+              </ul>
+            </Card>
+          </section>
+          
+          <section>
+            <Card id="serviços">
+              <HeaderContentCard>
+                <span>
+                  <Images size={25} color="#005CB8" />
+                </span>
+                <p>
+                  Veja meus serviços
+                </p>
+              </HeaderContentCard>
 
-          <Card>
-            <HeaderContentCard>
-              <span>
-                <PaintRoller size={25} color="#005CB8" />
-              </span>
-              <p>
-                Serviços
-              </p>
-            </HeaderContentCard>
-
-            <ul>
-              <li><CheckCircle size={25} color="#31B042" />Pintura Mecanizada</li>
-              <li><CheckCircle size={25} color="#31B042" />Lixamento Mecanizado</li>
-              <li><CheckCircle size={25} color="#31B042" />Emassamento Geral</li>
-              <li><CheckCircle size={25} color="#31B042" />Pinturas em Portões</li>
-              <li><CheckCircle size={25} color="#31B042" />Pinturas em Implementos</li>
-              <li><CheckCircle size={25} color="#31B042" />Efeito Mármore Polido</li>
-            </ul>
-          </Card>
-
-          <Card>
-            <HeaderContentCard>
-              <span>
-                <Star size={25} color="red" />
-              </span>
-              <p>
-                Diferenciais
-              </p>
-            </HeaderContentCard>
-
-            <ul>
-              <li><Check size={25} color="#31B042" />Qualidade Garantida.</li>
-              <li><Check size={25} color="#31B042" />Materiais de primeira Linha.</li>
-              <li><Check size={25} color="#31B042" />Pontualidade.</li>
-              <li><Check size={25} color="#31B042" />Prazos cumpridos com rigor.</li>
-              <li><Check size={25} color="#31B042" />Orçamento gratuito.</li>
-              <li><Check size={25} color="#31B042" />Avaliação sem compromisso.</li>
-            </ul>
-
-          </Card>
-
-          <Card>
-            <HeaderContentCard>
-              <span>
-                <Images size={25} color="#005CB8" />
-              </span>
-              <p>
-                Veja meus serviços
-              </p>
-            </HeaderContentCard>
-
-            <CarrosselImage>
-              <div className="carrossel" ref={carrossel}>
-                {
-                  data.map((photo) => (
-                    <div className="imageContainer">
-                      <img key={photo.id} src={photo.photoAdress} alt="" className="swiperImage" />
-                    </div>
+              <CarrosselImage>
+                <div className="carrossel" ref={carrossel}>
+                  {
+                    data.map((photo) => (
+                      <div className="imageContainer">
+                        <img key={photo.id} src={photo.photoAdress} alt="" className="swiperImage" />
+                      </div>
 
 
-                  ))
-                }
-              </div>
+                    ))
+                  }
+                </div>
 
-              <div className="containerButton">
-                <button onClick={handleLeftClick}>
-                  <CaretLeft size={32} />
-                </button>
-                <button onClick={handleRightClick}>
-                  <CaretRight size={32} />
-                </button>
-              </div>
+                <div className="containerButton">
+                  <button onClick={handleLeftClick}>
+                    <CaretLeft size={32} />
+                  </button>
+                  <button onClick={handleRightClick}>
+                    <CaretRight size={32} />
+                  </button>
+                </div>
+              </CarrosselImage>
+            </Card>
 
+          </section>
+          
+          <section>
+            <Card id="contato">
+              <HeaderContentCard>
+                <span>
+                  <PhoneCall size={25} color="#005CB8" />
+                </span>
+                <p id="sobre" >
 
-            </CarrosselImage>
+                  Entre em contato
+                </p>
+              </HeaderContentCard>
 
+              <Contacts>
+                <a className="link1" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <WhatsappLogo size={25} color="#31B042" />
+                  Clique e faça seu orçamento pelo whatsApp
+                </a>
 
-          </Card>
-
-          <Card>
-            <HeaderContentCard>
-              <span>
-                <PhoneCall size={25} color="#005CB8" />
-              </span>
-              <p id="sobre" >
-
-                Entre em contato
-              </p>
-            </HeaderContentCard>
-
-            <Contacts>
-              <a className="link1" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <WhatsappLogo size={25} color="#31B042" />
-                Clique e faça seu orçamento pelo whatsApp
-              </a>
-
-              <a href="https://www.instagram.com/Kaua_pintura001">
-                <InstagramLogo size={25} color="#E1306C" />
-                Me siga no instagram e acompanhe meu serviço
-              </a>
-
-            </Contacts>
-
-
-          </Card>
+                <a href="https://www.instagram.com/Kaua_pintura001">
+                  <InstagramLogo size={25} color="#E1306C" />
+                  Me siga no instagram e acompanhe meu serviço
+                </a>
+              </Contacts>
+            </Card>    
+          </section>
         </ContentCards>
       </Content>
     </Container>
