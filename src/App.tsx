@@ -225,7 +225,7 @@ export function App() {
                   }
                 </div>
 
-                <div >
+                <div className="containerButton" >
                   <button onClick={handleLeftClick}>
                     <CaretLeft size={32} />
                   </button>
