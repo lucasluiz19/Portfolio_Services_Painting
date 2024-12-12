@@ -1,9 +1,9 @@
 import { Card, CarrosselImage, Contacts, Container, Content, ContentCards, Header, HeaderContentCard } from "./styles";
 import logo from './assets/logo.jpeg'
-import { Check, CheckCircle, Home, Images, Menu, PaintRoller, PhoneCall, Star } from "lucide-react";
-import { CaretLeft, CaretRight, InstagramLogo, WhatsappLogo, X } from "phosphor-react";
+import { Check, CheckCircle, Home, Images, PaintRoller, PhoneCall, Star } from "lucide-react";
+import { CaretLeft, CaretRight, InstagramLogo, WhatsappLogo } from "phosphor-react";
 
-import { useRef, useState } from "react";
+import { useRef} from "react";
 
 
 
@@ -132,7 +132,7 @@ export function App() {
         <ContentCards >
           <p>Transformando espaços com cor e qualidade</p>
 
-          <section id="sobre">
+          <section >
             <Card  >
               <HeaderContentCard  >
                 <span>
@@ -157,7 +157,7 @@ export function App() {
             </Card>
           </section >
           
-          <section id="serviços">
+          <section >
             <Card >
               <HeaderContentCard>
                 <span>
@@ -179,7 +179,7 @@ export function App() {
             </Card>
           </section>
           
-          <section id="diferenciais">
+          <section >
             <Card >
               <HeaderContentCard>
                 <span>
@@ -202,7 +202,7 @@ export function App() {
           </section>
           
           <section>
-            <Card id="serviços">
+            <Card >
               <HeaderContentCard>
                 <span>
                   <Images size={25} color="#005CB8" />
@@ -225,7 +225,7 @@ export function App() {
                   }
                 </div>
 
-                <div className="containerButton">
+                <div >
                   <button onClick={handleLeftClick}>
                     <CaretLeft size={32} />
                   </button>
@@ -239,7 +239,7 @@ export function App() {
           </section>
           
           <section>
-            <Card id="contato">
+            <Card >
               <HeaderContentCard>
                 <span>
                   <PhoneCall size={25} color="#005CB8" />
@@ -251,7 +251,7 @@ export function App() {
               </HeaderContentCard>
 
               <Contacts>
-                <a className="link1" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <WhatsappLogo size={25} color="#31B042" />
                   Clique e faça seu orçamento pelo whatsApp
                 </a>
